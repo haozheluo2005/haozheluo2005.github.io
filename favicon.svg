@@ -1,15 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Haozhe Luo</title>
-  <rect width="64" height="64" rx="14" fill="#101828"/>
-  <path d="M12 50 L24 14 H32 L20 50 Z" fill="#38BDF8"/>
-  <path d="M32 50 L44 14 H52 L40 50 Z" fill="#F97316"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Lion</title>
   <text
-    x="32"
-    y="40"
+    x="50"
+    y="86"
     text-anchor="middle"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="22"
-    font-weight="700"
-    fill="#FFFFFF"
-  >HL</text>
+    font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif"
+    font-size="88"
+  >🦁</text>
 </svg>
