@@ -597,6 +597,251 @@
         letter-spacing: .01em;
       }
 
+      .exp-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .exp-item {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) auto;
+        gap: 28px;
+        align-items: center;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .exp-logo-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 260px;
+        min-width: 0;
+        overflow: visible;
+      }
+
+      .exp-logo-box img {
+        width: auto;
+        max-width: 250px;
+        max-height: 82px;
+        height: auto;
+        object-fit: contain;
+        object-position: left center;
+      }
+
+      .exp-main {
+        min-width: 0;
+      }
+
+      .exp-side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        color: var(--ink-faint);
+        font-size: 12.5px;
+        font-weight: 500;
+        letter-spacing: .04em;
+        line-height: 1.4;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .exp-org {
+        color: var(--ink);
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: -.015em;
+        line-height: 1.35;
+      }
+
+      .exp-role {
+        margin-top: 4px;
+        color: var(--ink-soft);
+        font-size: 13.5px;
+        line-height: 1.5;
+      }
+
+      .exp-place {
+        font-weight: 400;
+        letter-spacing: .01em;
+      }
+
+      .scholar-link {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-top: 4px;
+        white-space: nowrap;
+      }
+
+      .pub-group {
+        margin-top: 18px;
+      }
+
+      .pub-group-head {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 6px 0 12px;
+        margin-bottom: 4px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .pub-group-title {
+        color: var(--ink);
+        font-size: clamp(22px, 2.4vw, 28px);
+        font-weight: 500;
+        letter-spacing: -.025em;
+        line-height: 1.15;
+      }
+
+      .pub-group-meta {
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .pub-list {
+        list-style: none;
+        border-top: none;
+      }
+
+      .pub-item {
+        display: grid;
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .pub-item--lead {
+        background: color-mix(in srgb, var(--accent) 5%, transparent);
+        box-shadow: inset 2px 0 0 color-mix(in srgb, var(--accent) 40%, transparent);
+      }
+
+      .pub-thumb {
+        width: 140px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        background: var(--bg-soft);
+        box-shadow: 0 0 0 1px var(--line);
+      }
+
+      .pub-thumb-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        min-height: 80px;
+        padding: 10px;
+        color: var(--ink-faint);
+        font-size: 10px;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .pub-thumb img {
+        display: block;
+        width: 140px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .pub-body {
+        min-width: 0;
+      }
+
+      .pub-title {
+        color: var(--ink);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -.015em;
+        line-height: 1.3;
+      }
+
+      .pub-authors {
+        margin-top: 4px;
+        color: var(--ink-faint);
+        font-size: 12.5px;
+        line-height: 1.45;
+      }
+
+      .pub-authors .self {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .pub-venue {
+        margin-top: 4px;
+        color: var(--ink-soft);
+        font-size: 11.5px;
+        line-height: 1.35;
+      }
+
+      .venue-name {
+        color: var(--accent);
+        font-size: inherit;
+        font-weight: 600;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+      }
+
+      .pub-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 2px 0;
+        margin-top: 6px;
+      }
+
+      .pub-link {
+        color: var(--ink);
+        font-size: 12.5px;
+        font-weight: 500;
+        padding-right: 10px;
+        text-decoration: none;
+      }
+
+      .pub-link:hover {
+        color: var(--ink);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .prog-more {
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .prog-more li {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 12px;
+        align-items: baseline;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--line-soft);
+        color: var(--ink-soft);
+        font-size: 13.5px;
+        line-height: 1.45;
+      }
+
+      .p-year {
+        color: var(--ink-faint);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: .04em;
+      }
+
       footer {
         margin-top: 20px;
         padding: 36px 0 40px;
@@ -793,12 +1038,20 @@
           padding: 14px 0;
         }
 
-        .edu-logo-box {
+        .exp-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 14px 0;
+        }
+
+        .edu-logo-box,
+        .exp-logo-box {
           width: auto;
           height: 58px;
         }
 
-        .edu-logo-box img {
+        .edu-logo-box img,
+        .exp-logo-box img {
           max-width: 220px;
           max-height: 54px;
         }
@@ -811,6 +1064,38 @@
           flex-wrap: wrap;
           text-align: left;
           white-space: normal;
+        }
+
+        .exp-side {
+          order: -1;
+          align-items: flex-start;
+          flex-direction: row;
+          gap: 10px;
+          flex-wrap: wrap;
+          text-align: left;
+          white-space: normal;
+        }
+
+        .pub-item {
+          grid-template-columns: 92px minmax(0, 1fr);
+          gap: 12px;
+          padding: 12px 0;
+        }
+
+        .pub-thumb,
+        .pub-thumb img,
+        .pub-thumb-placeholder {
+          width: 92px;
+        }
+
+        .pub-thumb-placeholder {
+          min-height: 58px;
+          padding: 8px;
+          font-size: 9.5px;
+        }
+
+        .pub-title {
+          font-size: 15px;
         }
 
         .sec-head {
@@ -860,6 +1145,9 @@
           <a href="#about">About</a>
           <a href="#news">News</a>
           <a href="#education">Education</a>
+          <a href="#experience">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#competitions">Competitions</a>
           <a href="Haozhe_Luo_cv.pdf">CV</a>
         </div>
       </div>
@@ -922,7 +1210,7 @@
         <ul class="edu-list reveal">
           <li class="edu-item">
             <div class="edu-logo-box">
-              <img src="assets/files/institute/northeastern-university.jpg" alt="Northeastern University">
+              <img src="assets/files/institute/northeastern-university.png" alt="Northeastern University">
             </div>
             <div class="edu-main">
               <div class="edu-school">Northeastern University</div>
@@ -934,6 +1222,105 @@
               <span class="edu-place">Qinhuangdao, China</span>
             </div>
           </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block soft" id="experience">
+      <div class="wrap wrap-wide">
+        <div class="sec-head reveal">
+          <h2 class="sec-title">Research Experience</h2>
+        </div>
+
+        <ul class="exp-list reveal">
+          <li class="exp-item">
+            <div class="exp-logo-box">
+              <img src="assets/files/institute/zhejiang-university.webp" alt="Zhejiang University">
+            </div>
+            <div class="exp-main">
+              <div class="exp-org"><a href="https://github.com/zjunlp" target="_blank">ZJUNLP</a>, Zhejiang University</div>
+              <div class="exp-role">Research Intern — LLM Memory, AI Agents and Mechanistic Interpretability</div>
+            </div>
+            <div class="exp-side">
+              <span>Jan. 2026 — Aug. 2026</span>
+              <span class="exp-place">Hangzhou, China</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="publications">
+      <div class="wrap wrap-wide">
+        <div class="sec-head reveal">
+          <h2 class="sec-title">Publications</h2>
+          <a class="scholar-link" href="https://scholar.google.com/citations?user=hshLmacAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar →</a>
+        </div>
+
+        <div class="pub-group reveal">
+          <div class="pub-group-head">
+            <h3 class="pub-group-title">Benchmark</h3>
+            <span class="pub-group-meta">Evaluation</span>
+          </div>
+
+          <ul class="pub-list">
+            <li class="pub-item pub-item--lead">
+              <div class="pub-thumb">
+                <img src="assets/files/work/2026-memtrapbench.png" alt="MemTrapBench overview" loading="lazy">
+              </div>
+              <div class="pub-body">
+                <div class="pub-title">MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use</div>
+                <div class="pub-authors">Mengru Wang*, <span class="self">Haozhe Luo*</span>, Zhenqian Xu, Zhixiang Cui, Haoming Xu, Qu Yang, Jizhan Fang, Junfeng Fang, Ningyu Zhang</div>
+                <div class="pub-venue"><span class="venue-name">Under Review</span></div>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/abs/2608.20202" target="_blank" rel="noopener noreferrer">arXiv</a>
+                </div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-thumb">
+                <img src="assets/files/work/2026-socialreasonbench.png" alt="SocialReasonBench overview" loading="lazy">
+              </div>
+              <div class="pub-body">
+                <div class="pub-title">SocialReasonBench: A Video-QA Benchmark for Social Reasoning with Counterfactual Narrative Videos</div>
+                <div class="pub-authors">Zheyu Huang, Zijing Shi, <span class="self">Haozhe Luo</span>, Huadong Tang, Mingyu Liu, Meng Fang, Ling Chen</div>
+                <div class="pub-venue"><span class="venue-name">EMNLP 2026</span> (findings)</div>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/abs/2608.30716" target="_blank" rel="noopener noreferrer">arXiv</a>
+                </div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-thumb">
+                <img src="assets/files/work/2026-beyond-survival.png" alt="Beyond Survival overview" loading="lazy">
+              </div>
+              <div class="pub-body">
+                <div class="pub-title">Beyond Survival: Evaluating LLMs in Social Deduction Games with Human-Aligned Strategies</div>
+                <div class="pub-authors">Zirui Song, Yuan Huang, Junchang Liu, <span class="self">Haozhe Luo</span>, Chenxi Wang, Lang Gao, Zixiang Xu, Mingfei Han, Xiaojun Chang, Xiuying Chen</div>
+                <div class="pub-venue"><span class="venue-name">EMNLP 2026</span> (main)</div>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/abs/2510.11389" target="_blank" rel="noopener noreferrer">arXiv</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block soft" id="competitions">
+      <div class="wrap wrap-wide">
+        <div class="sec-head reveal">
+          <h2 class="sec-title">Competitions</h2>
+        </div>
+
+        <ul class="prog-more reveal">
+          <li><span class="p-year">2026</span><span>Second Prize 🥈, National Energy-Saving and Emission Reduction Competition</span></li>
+          <li><span class="p-year">2025</span><span>First Prize 🥇, Global Campus AI Algorithm Elite Competition</span></li>
+          <li><span class="p-year">2025</span><span>Bronze Award 🥉, China International College Students’ Innovation Competition</span></li>
+          <li><span class="p-year">2025</span><span>Second Prize 🥈, National Computer Game Playing Tournament</span></li>
+          <li><span class="p-year">2025</span><span>Second Prize 🥈, TRIZ Cup Innovation Method Competition</span></li>
+          <li><span class="p-year">2024</span><span>Third Prize 🥉, APMCM Asia-Pacific Mathematical Contest in Modeling</span></li>
         </ul>
       </div>
     </section>
