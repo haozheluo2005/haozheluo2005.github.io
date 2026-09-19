@@ -716,7 +716,7 @@
 
       .pub-item {
         display: grid;
-        grid-template-columns: 140px minmax(0, 1fr);
+        grid-template-columns: 160px minmax(0, 1fr);
         gap: 16px;
         align-items: center;
         padding: 12px 10px;
@@ -729,7 +729,7 @@
       }
 
       .pub-thumb {
-        width: 140px;
+        width: 160px;
         flex-shrink: 0;
         overflow: hidden;
         border-radius: 10px;
@@ -741,7 +741,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 140px;
+        width: 160px;
         min-height: 80px;
         padding: 10px;
         color: var(--ink-faint);
@@ -750,9 +750,10 @@
         text-align: center;
       }
 
-      .pub-thumb img {
+      .pub-thumb img,
+      .pub-thumb video {
         display: block;
-        width: 140px;
+        width: 160px;
         height: auto;
         object-fit: contain;
       }
@@ -781,11 +782,49 @@
         font-weight: 600;
       }
 
+      .pub-authors-detail-btn {
+        display: inline;
+        margin-left: 6px;
+        padding: 0;
+        border: none;
+        background: none;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .pub-authors-detail-btn:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .pub-authors sup {
+        font-size: .75em;
+        line-height: 0;
+      }
+
       .pub-venue {
         margin-top: 4px;
         color: var(--ink-soft);
         font-size: 11.5px;
         line-height: 1.35;
+      }
+
+      .pub-award {
+        margin-top: 4px;
+        color: var(--ink);
+        font-size: 11.5px;
+        font-weight: 500;
+        line-height: 1.35;
+      }
+
+      .award-hl {
+        color: #c62828;
+        font-weight: 600;
       }
 
       .venue-name {
@@ -805,17 +844,31 @@
       }
 
       .pub-link {
-        color: var(--ink);
         font-size: 12.5px;
         font-weight: 500;
-        padding-right: 10px;
-        text-decoration: none;
+        padding: 0 10px 0 0;
+        border: none;
+        border-radius: 0;
+        color: var(--ink);
+        background: transparent;
+        letter-spacing: .01em;
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, var(--ink) 22%, transparent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        transition: color .15s ease, text-decoration-color .15s ease;
+      }
+
+      .pub-link + .pub-link {
+        padding-left: 10px;
+        border-left: 1px solid var(--line);
       }
 
       .pub-link:hover {
         color: var(--ink);
-        text-decoration: underline;
-        text-underline-offset: 3px;
+        text-decoration-color: var(--ink);
+        background: transparent;
+        border-color: var(--line);
       }
 
       .prog-more {
@@ -1077,15 +1130,16 @@
         }
 
         .pub-item {
-          grid-template-columns: 92px minmax(0, 1fr);
+          grid-template-columns: 104px minmax(0, 1fr);
           gap: 12px;
           padding: 12px 0;
         }
 
         .pub-thumb,
         .pub-thumb img,
+        .pub-thumb video,
         .pub-thumb-placeholder {
-          width: 92px;
+          width: 104px;
         }
 
         .pub-thumb-placeholder {
@@ -1096,6 +1150,15 @@
 
         .pub-title {
           font-size: 15px;
+        }
+
+        .pub-links {
+          gap: 4px 0;
+        }
+
+        .pub-link {
+          font-size: 12.5px;
+          padding-right: 8px;
         }
 
         .sec-head {
@@ -1167,7 +1230,7 @@
             </p>
 
             <p class="intro-bio reveal reveal-d3">
-              I am a senior undergraduate student at Northeastern University (东北大学).
+              I am a senior undergraduate student at Northeastern University.
               My research interests include agentic AI, reasoning, and multimodal AI.
               I am actively seeking PhD opportunities.
             </p>
@@ -1213,7 +1276,7 @@
               <img src="assets/files/institute/northeastern-university.png" alt="Northeastern University">
             </div>
             <div class="edu-main">
-              <div class="edu-school">Northeastern University</div>
+              <div class="edu-school">Northeastern University (NEU)</div>
               <div class="edu-dept">School of Computer and Communication Engineering</div>
               <div class="edu-degree">B.Eng. Candidate in Communication Engineering</div>
             </div>
@@ -1259,6 +1322,37 @@
 
         <div class="pub-group reveal">
           <div class="pub-group-head">
+            <h3 class="pub-group-title">Agentic AI</h3>
+          </div>
+
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-thumb">
+                <video src="202609191438.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Mechanist overview"></video>
+              </div>
+              <div class="pub-body">
+                <div class="pub-title">Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence</div>
+                <div class="pub-authors pub-authors--expandable">
+                  <span class="authors-short">Mengru Wang<sup>*</sup>, Junfeng Fang<sup>*</sup>, Shuofei Qiao<sup>*</sup>, …, <span class="self">Haozhe Luo</span>, …, Tat Seng Chua, Huajun Chen<sup>†</sup></span>
+                  <span class="authors-full" hidden>Mengru Wang<sup>*</sup>, Junfeng Fang<sup>*</sup>, Shuofei Qiao<sup>*</sup>, Zhenqian Xu, Haoming Xu, Haoxiong Wang, Shumin Deng, Linyi Yang, Xin Xu, Yunzhi Yao, Dan Zhang, Fei Shen, Zhixiang Cui, Buqiang Xu, <span class="self">Haozhe Luo</span>, Yunxiang Wei, Ningyu Zhang<sup>†</sup>, Julian McAuley, Tat Seng Chua, Huajun Chen<sup>†</sup></span>
+                  <button type="button" class="pub-authors-detail-btn" aria-expanded="false">Detailed author list</button>
+                </div>
+                <div class="pub-venue"><span class="venue-name">Under Review</span></div>
+                <div class="pub-award">YSSNLP 2026 <span class="award-hl">Highlight Poster</span></div>
+                <div class="pub-links">
+                  <a class="pub-link" href="http://mechanist.openkg.cn/#/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                  <a class="pub-link" href="https://arxiv.org/pdf/2608.12036" target="_blank" rel="noopener noreferrer">Paper</a>
+                  <a class="pub-link" href="https://arxiv.org/abs/2608.12036" target="_blank" rel="noopener noreferrer">arXiv</a>
+                  <a class="pub-link" href="https://github.com/zjunlp/Mechanist" target="_blank" rel="noopener noreferrer">Code</a>
+                  <a class="pub-link" href="https://mp.weixin.qq.com/s/JlC55YGda5Ba_0TKDlxIgA" target="_blank" rel="noopener noreferrer">机器之心</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pub-group reveal">
+          <div class="pub-group-head">
             <h3 class="pub-group-title">Benchmark</h3>
             <span class="pub-group-meta">Evaluation</span>
           </div>
@@ -1273,7 +1367,10 @@
                 <div class="pub-authors">Mengru Wang*, <span class="self">Haozhe Luo*</span>, Zhenqian Xu, Zhixiang Cui, Haoming Xu, Qu Yang, Jizhan Fang, Junfeng Fang, Ningyu Zhang</div>
                 <div class="pub-venue"><span class="venue-name">Under Review</span></div>
                 <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/pdf/2608.20202" target="_blank" rel="noopener noreferrer">Paper</a>
                   <a class="pub-link" href="https://arxiv.org/abs/2608.20202" target="_blank" rel="noopener noreferrer">arXiv</a>
+                  <a class="pub-link" href="https://github.com/zjunlp/MemTrapBench" target="_blank" rel="noopener noreferrer">Code</a>
+                  <a class="pub-link" href="https://x.com/godhearsw/status/2091309131353219197?s=46" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
                 </div>
               </div>
             </li>
@@ -1286,6 +1383,7 @@
                 <div class="pub-authors">Zheyu Huang, Zijing Shi, <span class="self">Haozhe Luo</span>, Huadong Tang, Mingyu Liu, Meng Fang, Ling Chen</div>
                 <div class="pub-venue"><span class="venue-name">EMNLP 2026</span> (findings)</div>
                 <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/pdf/2608.30716" target="_blank" rel="noopener noreferrer">Paper</a>
                   <a class="pub-link" href="https://arxiv.org/abs/2608.30716" target="_blank" rel="noopener noreferrer">arXiv</a>
                 </div>
               </div>
@@ -1299,7 +1397,9 @@
                 <div class="pub-authors">Zirui Song, Yuan Huang, Junchang Liu, <span class="self">Haozhe Luo</span>, Chenxi Wang, Lang Gao, Zixiang Xu, Mingfei Han, Xiaojun Chang, Xiuying Chen</div>
                 <div class="pub-venue"><span class="venue-name">EMNLP 2026</span> (main)</div>
                 <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/pdf/2510.11389" target="_blank" rel="noopener noreferrer">Paper</a>
                   <a class="pub-link" href="https://arxiv.org/abs/2510.11389" target="_blank" rel="noopener noreferrer">arXiv</a>
+                  <a class="pub-link" href="https://github.com/ZiruiSongBest/WereBench" target="_blank" rel="noopener noreferrer">Code</a>
                 </div>
               </div>
             </li>
@@ -1333,6 +1433,21 @@
     </footer>
 
     <script>
+      document.querySelectorAll(".pub-authors--expandable").forEach(authors => {
+        const shortList = authors.querySelector(".authors-short");
+        const fullList = authors.querySelector(".authors-full");
+        const button = authors.querySelector(".pub-authors-detail-btn");
+        if (!shortList || !fullList || !button) return;
+
+        button.addEventListener("click", () => {
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          shortList.hidden = !expanded;
+          fullList.hidden = expanded;
+          button.setAttribute("aria-expanded", String(!expanded));
+          button.textContent = expanded ? "Detailed author list" : "Hide detailed author list";
+        });
+      });
+
       const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
